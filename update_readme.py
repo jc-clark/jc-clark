@@ -19,7 +19,7 @@ with open("README.md.tpl", "r") as tpl_file:
 
 # Replace placeholders with actual posts
 template = Template(tpl_content)
-readme_content = template.substitute(
+readme_content = template.safe_substitute(
     changelog_post_1=changelog_posts[0],
     changelog_post_2=changelog_posts[1],
     changelog_post_3=changelog_posts[2]
