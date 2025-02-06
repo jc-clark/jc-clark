@@ -1,0 +1,9 @@
+<svg width="400" height="60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="60" fill="white" />
+  <text x="400" y="30" dominant-baseline="middle" text-anchor="middle" font-size="20">
+    <animate attributeName="x" from="400" to="-200" dur="10s" repeatCount="indefinite" />
+    • Writing for GitHub [docs](https://docs.github.com/) • I love my cats, Tony and Juniper. They are best friends and so cute I can barely handle it.
+ • Ask me about growing vegetables, film photography/developing, strange time signatures, having too many hobbies, and ridiculously long books. • I'm probably listening to Radiohead.
+
+  </text>
+</svg>
