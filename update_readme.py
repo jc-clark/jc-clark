@@ -13,6 +13,10 @@ changelog_posts = [
     f"<a href='{post.link}'>{post.title}</a>" for post in latest_posts
 ]
 
+# Debug prints to verify extracted data
+for i, post in enumerate(changelog_posts, 1):
+    print(f"changelog_post_{i}: {post}")
+
 # Read the template file
 with open("README.md.tpl", "r") as tpl_file:
     tpl_content = tpl_file.read()
@@ -24,6 +28,10 @@ readme_content = template.safe_substitute(
     changelog_post_2=changelog_posts[1],
     changelog_post_3=changelog_posts[2]
 )
+
+# Debug print to verify the final content
+print("Updated README content:")
+print(readme_content)
 
 # Write the updated content to README.md
 with open("README.md", "w") as readme_file:
