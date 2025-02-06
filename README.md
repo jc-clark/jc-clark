@@ -1,8 +1,7 @@
-<p align="center">
-Hey! I'm Joe 🔮</p>
+Hello! I'm Joe and I technically write for <a href="https://docs.github.com">GitHub docs</a>. 🔮
 
-<p align="center">
-  I'm a technical writer for <a href="https://docs.github.com">GitHub docs</a>.
-</p>
+## GitHub's recent changelog posts
 
-</p>
+1. {{changelog_post_1}}
+2. {{changelog_post_2}}
+3. {{changelog_post_3}}
