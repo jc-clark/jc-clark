@@ -1,16 +1,44 @@
 # Hey! I'm Joe 👋
 
-<marquee behavior="scroll" direction="left" scrollamount="5">
-  • You can find me working on GitHub [docs](https://docs.github.com/).
-  • I love my cats, Tony and Juniper. They are best friends and so cute I can barely handle it.
-  • Ask me about growing vegetables, film photography/developing, strange time signatures, having too many hobbies, and ridiculously long books.
-  • I'm probably listening to Radiohead.
-</marquee>
+<style>
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+}
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+.slideshow-container img {
+  width: 100%;
+}
+.fade {
+  animation: fade 15s infinite;
+}
+@keyframes fade {
+  0% { opacity: 1; }
+  33% { opacity: 1; }
+  34% { opacity: 0; }
+  66% { opacity: 0; }
+  67% { opacity: 1; }
+}
+</style>
 
-<svg width="400" height="60">
-  <rect width="400" height="60" fill="white" />
-  <text x="200" y="30" dominant-baseline="middle" text-anchor="middle" font-size="20">
-    <animate attributeName="x" from="400" to="-200" dur="10s" repeatCount="indefinite" />
-    • First bullet point • Second bullet point • Third bullet point • Fourth bullet point
-  </text>
-</svg>
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="https://raw.githubusercontent.com/jc-clark/jc-clark/main/images/image1.svg" alt="Image 1">
+  </div>
+  <div class="slide fade">
+    <img src="https://raw.githubusercontent.com/jc-clark/jc-clark/main/images/image2.svg" alt="Image 2">
+  </div>
+  <div class="slide fade">
+    <img src="https://raw.githubusercontent.com/jc-clark/jc-clark/main/images/image3.svg" alt="Image 3">
+  </div>
+</div>
+
+You can find me working on GitHub [docs](https://docs.github.com/).
+I love my cats, Tony and Juniper. They are best friends and so cute I can barely handle it.
+Ask me about growing vegetables, film photography/developing, strange time signatures, having too many hobbies, and ridiculously long books.
+I'm probably listening to Radiohead.
