@@ -2,6 +2,6 @@ Hello! I'm Joe and I technically write for <a href="https://docs.github.com">Git
 
 ## GitHub's recent changelog posts
 
-1. <a href='https://github.blog/changelog/2025-02-13-repositories-ruleset-history-import-and-export-are-generally-available'>Repositories: Ruleset history, import and export are generally available</a>
-2. <a href='https://github.blog/changelog/2025-02-13-github-copilot-for-xcode-chat-now-in-public-preview'>GitHub Copilot Chat for Xcode now in public preview</a>
-3. <a href='https://github.blog/changelog/2025-02-13-github-copilot-code-completions-now-in-public-preview-for-eclipse'>GitHub Copilot code completions now in public preview for Eclipse</a>
+1. <a href='https://github.blog/changelog/2025-02-14-personal-custom-instructions-bing-web-search-and-more-in-copilot-on-github-com'>Personal custom instructions, Bing web search, and more in Copilot on github.com</a>
+2. <a href='https://github.blog/changelog/2025-02-14-copilot-workspace-follow-ups-and-file-search-improvements'>Copilot Workspace: Follow ups and file search improvements</a>
+3. <a href='https://github.blog/changelog/2025-02-14-secret-scanning-detects-base64-encoded-github-tokens'>Secret scanning detects Base64-encoded GitHub tokens</a>
