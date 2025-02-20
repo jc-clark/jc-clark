@@ -2,6 +2,6 @@ Hello! I'm Joe and I technically write for <a href="https://docs.github.com">Git
 
 ## GitHub's recent changelog posts
 
-1. <a href='https://github.blog/changelog/2025-02-18-repositories-enterprise-rules-and-custom-properties-updates'>Repositories – Enterprise rules and custom properties updates</a>
-2. <a href='https://github.blog/changelog/2025-02-18-recent-improvements-to-artifact-attestations'>Recent improvements to Artifact Attestations</a>
-3. <a href='https://github.blog/changelog/2025-02-18-new-gpt-4o-copilot-code-completion-model-now-available-in-public-preview-for-copilot-in-vs-code'>New GPT-4o Copilot code completion model available now in public preview for Copilot in VS Code</a>
+1. <a href='https://github.blog/changelog/2025-02-19-dependabot-helps-users-focus-on-the-most-important-alerts-by-including-epss-scores-that-indicate-likelihood-of-exploitation-now-generally-available'>Dependabot helps users focus on the most important alerts by including EPSS scores that indicate likelihood of exploitation, now generally available</a>
+2. <a href='https://github.blog/changelog/2025-02-19-enhanced-billing-platform-for-free-plan-for-organizations'>Enhanced billing platform for Free plan for organizations</a>
+3. <a href='https://github.blog/changelog/2025-02-19-announcing-the-general-availability-of-github-copilot-extensions'>Announcing the General Availability of GitHub Copilot Extensions</a>
