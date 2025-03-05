@@ -2,6 +2,6 @@ Hello! I'm Joe and I technically write for <a href="https://docs.github.com">Git
 
 ## GitHub's recent changelog posts
 
-1. <a href='https://github.blog/changelog/2025-03-02-jetbrains-copilot-code-referencing-support-is-generally-available'>JetBrains Copilot code referencing support is generally available</a>
-2. <a href='https://github.blog/changelog/2025-02-28-copilot-workspace-showing-quota-limits-issues-in-dashboard-and-ux-improvements'>Copilot Workspace: Showing quota limits, issues in dashboard, and UX improvements</a>
-3. <a href='https://github.blog/changelog/2025-02-28-mobile-monthly-februarys-general-availability-and-more'>Mobile monthly: February’s general availability and more</a>
+1. <a href='https://github.blog/changelog/2025-03-04-introducing-github-secret-protection-and-github-code-security'>Introducing GitHub Secret Protection and GitHub Code Security</a>
+2. <a href='https://github.blog/changelog/2025-03-04-find-secrets-in-your-organization-with-the-secret-risk-assessment'>Find secrets in your organization with the secret risk assessment</a>
+3. <a href='https://github.blog/changelog/2025-03-04-improved-pull-request-merge-experience-is-now-generally-available'>Improved pull request merge experience is now generally available</a>
