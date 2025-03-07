@@ -2,6 +2,7 @@ import requests  # Import the requests library to make HTTP requests
 import feedparser  # Import the feedparser library to parse RSS feeds
 from string import Template  # Import the Template class from the string module for template substitution
 import sys  # Import sys to exit the script if needed
+import re  # Import re to use regular expressions for extracting current articles
 
 # URL of the freeCodeCamp RSS feed
 rss_url = "https://www.freecodecamp.org/news/rss/"
@@ -35,9 +36,11 @@ for post in feed.entries:
         if matched_programming_tags or matched_beginner_tags:
             # Only include post if:
             # 1. It has at least one beginner tag for Python/JavaScript, OR
-            # 2. It has HTML/CSS/Git/GitHub without requiring beginner tag
+            # 2. It has HTML/CSS/Git/GitHub without requiring beginner tag, OR
+            # 3. It has any beginner tag without requiring programming tag
             if (any(tag in ["python", "javascript"] for tag in matched_programming_tags) and matched_beginner_tags) or \
-               not any(tag in ["python", "javascript"] for tag in matched_programming_tags):
+               any(tag in ["html", "css", "git", "github"] for tag in matched_programming_tags) or \
+               matched_beginner_tags:
                 filtered_posts.append(post)
                 print(f"✅ Post accepted: {post.title}")
                 print(f"   Programming tags: {matched_programming_tags}")
@@ -75,6 +78,22 @@ for i, post in enumerate(news_posts, 1):
             tags = [tag.get('term', '') for tag in filtered_posts[i-1].tags]
             print(f"  Tags: {', '.join(tags)}")
 
+# Read the current README file to get existing articles
+with open("README.md", "r") as readme_file:
+    readme_content = readme_file.read()
+
+# Extract current articles using regular expressions
+current_articles = re.findall(r"<a href='[^']+'>([^<]+)</a> by [^<]+", readme_content)
+print(f"Current articles: {current_articles}")
+
+# Use current articles as fallback if needed
+while len(news_posts) < 2 and current_articles:
+    news_posts.append(current_articles.pop(0))
+
+# Ensure we have exactly 2 posts
+while len(news_posts) < 2:
+    news_posts.append("No post available")
+
 # Read the template file
 with open("README.md.tpl", "r") as tpl_file:
     tpl_content = tpl_file.read()
@@ -82,8 +101,8 @@ with open("README.md.tpl", "r") as tpl_file:
 # Replace placeholders with actual posts
 template = Template(tpl_content)
 readme_content = template.substitute(
-    news_post_1=news_posts[0] if len(news_posts) > 0 else "No post available",
-    news_post_2=news_posts[1] if len(news_posts) > 1 else "No post available"
+    news_post_1=news_posts[0],
+    news_post_2=news_posts[1]
 )
 
 # Write the updated content to README.md
