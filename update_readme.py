@@ -12,10 +12,6 @@ target_tags = [
     "javascript", "html", "css", "self-improvement", "git"
 ]
 
-# Fetch the RSS feed
-response = requests.get(rss_url)
-feed = feedparser.parse(response.content)
-
 # Filter posts by tags
 filtered_posts = []
 for post in feed.entries:
@@ -24,8 +20,11 @@ for post in feed.entries:
         # Extract the tag content from CDATA format
         post_tags = [tag.get('term', '').lower().strip() for tag in post.tags]
         
+        # Debug print to see the tags
+        print(f"Post tags: {post_tags}")
+        
         # Check if any of our target tags match the post tags
-        if any(target_tag.lower() in post_tag for target_tag in target_tags for post_tag in post_tags):
+        if any(target_tag.lower() in post_tags for target_tag in target_tags):
             filtered_posts.append(post)
     
     # Stop once we have 2 matching posts
