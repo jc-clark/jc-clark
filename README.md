@@ -7,8 +7,8 @@ Hello! I'm Joe and I technically write for <a href="https://docs.github.com">Git
   <p>Days remaining: <span id="countdown" style="font-size:1.3em; color:#6e40c9; font-weight:bold">##COUNTDOWN##</span></p>
 </div>
 
-## Latest articles from freeCodeCamp
+## Latest articles from freeCodeCamp test 1
 🤖 The [`update_readme.py` script](./update_readme.py) and [`update_readme.yml` GitHub Actions workflow](.github/workflows/update_readme.yml) regularly update this list with articles for beginners.
 
-1. <a href='https://www.freecodecamp.org/news/learn-machine-learning-concepts-plus-generative-ai/'>Learn Machine Learning Concepts plus Generative AI</a> by Beau Carnes
-2. <a href='https://www.freecodecamp.org/news/how-to-build-a-social-learning-platform-using-nextjs-stream-and-supabase/'>How to Build a Social Learning Platform using Next.js, Stream, and Supabase</a> by David Asaolu
+1. <a href='https://www.freecodecamp.org/news/how-to-build-a-social-learning-platform-using-nextjs-stream-and-supabase/'>How to Build a Social Learning Platform using Next.js, Stream, and Supabase</a> by David Asaolu
+2. <a href='https://www.freecodecamp.org/news/learn-git-through-gamification/'>Learn Git through Gamification – A Visual Guide to Key Version Control Concepts</a> by Jacob Stopak
