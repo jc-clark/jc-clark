@@ -34,9 +34,10 @@ for post in feed.entries:
         # If there are any matched tags at all
         if matched_programming_tags or matched_beginner_tags:
             # Only include post if:
-            # 1. It has at least one beginner tag, OR
-            # 2. It has HTML/CSS/Git/GitHub (but not Python/JavaScript) without requiring beginner tag
-            if matched_beginner_tags or not any(tag in ["python", "javascript"] for tag in matched_programming_tags):
+            # 1. It has at least one beginner tag for Python/JavaScript, OR
+            # 2. It has HTML/CSS/Git/GitHub without requiring beginner tag
+            if (any(tag in ["python", "javascript"] for tag in matched_programming_tags) and matched_beginner_tags) or \
+               not any(tag in ["python", "javascript"] for tag in matched_programming_tags):
                 filtered_posts.append(post)
                 print(f"✅ Post accepted: {post.title}")
                 print(f"   Programming tags: {matched_programming_tags}")
