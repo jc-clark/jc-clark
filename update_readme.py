@@ -6,6 +6,9 @@ import sys  # Import sys to exit the script if needed
 # URL of the freeCodeCamp RSS feed
 rss_url = "https://www.freecodecamp.org/news/rss/"
 
+# Parse the RSS feed
+feed = feedparser.parse(rss_url)
+
 # List of tags to filter by
 target_tags = [
     "beginners guide", "beginners", "learning", "python", 
@@ -75,4 +78,4 @@ print(readme_content)
 with open("README.md", "w") as readme_file:
     readme_file.write(readme_content)
 
-print("README successfully updated with 2 filtered posts!")
+print("README successfully updated.")
