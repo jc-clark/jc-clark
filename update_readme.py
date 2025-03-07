@@ -48,14 +48,15 @@ for post in feed.entries:
     if len(filtered_posts) >= 2:
         break
 
-# If we don't have exactly 2 filtered posts, exit without updating
-if len(filtered_posts) != 2:
+# If we don't have exactly 2 filtered posts, use as many as we have
+if len(filtered_posts) < 2:
     print(f"Not enough filtered posts found. Only found {len(filtered_posts)} posts matching the tags.")
-    print("README not updated.")
-    sys.exit(0)  # Exit the script without error
+    print("README will be updated with available posts.")
+    latest_posts = filtered_posts
+else:
+    latest_posts = filtered_posts[:2]
 
-# Extract the two filtered posts with author information
-latest_posts = filtered_posts[:2]
+# Extract the filtered posts with author information
 news_posts = []
 for post in latest_posts:
     author = post.get('author', '')
@@ -80,8 +81,8 @@ with open("README.md.tpl", "r") as tpl_file:
 # Replace placeholders with actual posts
 template = Template(tpl_content)
 readme_content = template.substitute(
-    news_post_1=news_posts[0],
-    news_post_2=news_posts[1]
+    news_post_1=news_posts[0] if len(news_posts) > 0 else "No post available",
+    news_post_2=news_posts[1] if len(news_posts) > 1 else "No post available"
 )
 
 # Write the updated content to README.md
